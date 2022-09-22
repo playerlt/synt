@@ -25,7 +25,7 @@ func Run() {
 	staticFiles, _ := fs.Sub(FS, "frontend/dist")
 	router.POST("/api/v1/files", c.FilesController)
 	router.GET("/api/v1/qrcodes", c.QrcodesController)
-	router.GET("/uploads/:path", c.UploadsController)
+	router.GET("/uploads/:path", c.DownloadsController)
 	router.GET("/api/v1/addresses", c.AddressesController)
 	router.POST("/api/v1/texts", c.TextsController)
 	router.GET("/ws", func(c *gin.Context) {
